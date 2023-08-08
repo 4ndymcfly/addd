@@ -10,7 +10,7 @@ addd.sh --clean
 ```
 # Features:
 - When run for the first time, the script makes a backup copy of the original '/etc/hosts' file with the extension .old.
-- The script checks if the IP entered in the '/etc/hosts' file exists with another domain name. 
+- The script checks if the IP entered in the '/etc/hosts' file already exists with another domain name. 
 - Each time a new entry is entered, the script checks if the domain IP exists, and if it does, it adds the new domain name to the line with the existing IP.
 - The --clean option removes all existing domains under the '# Others' line of the /etc/hosts file.
 
