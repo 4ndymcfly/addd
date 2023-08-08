@@ -26,7 +26,7 @@ else
     IP=$1
     DOMAIN=$2
 
-    # Check if the /etc/hosts file exists and, if so, create a copy with the .old extension
+    # Check if the /etc/hosts file already exists and, if so, create a copy with the .old extension
     if [ -e /etc/hosts ]; then
         if [ ! -e /etc/hosts.old ]; then
             cp /etc/hosts /etc/hosts.old
@@ -39,7 +39,7 @@ else
         exit 1
     
     elif grep -q "^$IP" /etc/hosts; then
-        # Add the domain name to the same line as the existing entry
+        # Add the domain name on a existing IP entry
         sed -i "/^$IP/ s/$/ $DOMAIN/" /etc/hosts
         echo -e "\n[+] '$DOMAIN' has been successfully added to the existing entry with IP $IP in the /etc/hosts file\n"
     
