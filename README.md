@@ -1,5 +1,5 @@
 # ADDD
-### Small script for adding domain names and their IPs in '/etc/hosts' and deleting old entries.
+Small script for adding domain names and their IPs in '/etc/hosts' and deleting old entries.
 
 Usage as root permissions:
 ```bash
